@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap');
+.container{
+   max-width: 1100px;
+   margin: 0px auto;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+   
+}
+h1{
+    color: white;
+    background-color: #fcc417;
+    text-align: center;
+    padding: 10px 0px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+#location{
+    border: none;
+    border-bottom: 2px solid #d6d6d6;
+    outline: none;
+    display: block;
+    width: 300px;
+    margin: 0px auto;
+    padding: 0px 50px 0px 10px;
+    font-size: 30px;
+}
+main{
+    padding: 40px 0px;
+    position: relative;   
+}
+button{
+    position: absolute;
+    left: calc(50% + 150px);
+    top: calc(40px + 10px);
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 2px;
+    color: #adadad;
+    outline: none;
+}
+label{
+    position: absolute;
+    left: calc(50% - 180px);
+    top: calc(40px + 20px);
+    font-size: 20px;
+}
+#location:focus~label{
+    top: calc(40px - 30px);
+    transition: 0.5s;
+}
+.ontop{
+    top: calc(40px - 30px);
+    transition: 0.5s;
+}
+.card{
+    display: flex;
+    background-color: #f5f4f9;
+    width: 100%;
+    padding: 40px;
+    border-radius: 40px;
+    margin-top: 50px;
+    justify-content: space-around;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.219);
+    align-items: center;
+    position: relative;
+}
+.card img{
+    max-width: 250px;
+    object-fit: contain;
+}
+.temp{
+    font-size: 70px;
+}
+.descr{
+    font-size: 50px;
+}
+.card p{
+    font-size: 20px;
+}
+.card span{
+    font-weight: bold;
+}
+.icon{
+    background-color: #fcc417;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    
+}
+.card.empty::before,.card.error::before,.card.loader::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f4f9;
+    top: 0px;
+    left: 0px;
+    content: "Введи название города и нажимай найти";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+.card.error::before{
+   content: "";
+   background-image: url(error-404.png);
+   background-position: center;
+   background-size: 150px;
+   background-repeat: no-repeat;
+}
+.card.loader::before{
+    content: "";
+    background-image: url(loader.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+}

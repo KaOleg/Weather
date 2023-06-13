@@ -1,0 +1,14 @@
+@media (max-width: 425px) {
+    h1{
+        width: 100%;
+    }
+    .card{
+        width: 370px;
+        text-align: left;
+        flex-direction: column;
+        margin: 30px auto;
+    }
+    .search{
+        left: calc(50% + 110px);
+    }
+}
